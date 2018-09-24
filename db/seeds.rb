@@ -8,5 +8,14 @@
 
 
 User.create(name: "Diego barbosa", email: "diegocardoso@cjr.org.br", password: "12345678", password_confirmation:"12345678", is_logged: "false")
+User.create(name: "Vitinho", email: "vitor@cjr.org.br", password: "12345678", password_confirmation:"12345678", is_logged: "false")
+User.create(name: "batata", email: "batata@cjr.org.br", password: "12345678", password_confirmation:"12345678", is_logged: "false")
+User.create(name: "jurispilambri", email: "jurispilambri@cjr.org.br", password: "12345678", password_confirmation:"12345678", is_logged: "false")
+User.create(name: "sirugenoitu", email: "sirugenoitu@cjr.org.br", password: "12345678", password_confirmation:"12345678", is_logged: "false")
+
+
+
+
+
 
 Place.create(name: "SobraDisney", rating: "5.0", url:"https://protestofacil.com/wp-content/uploads/2017/03/Sobradinho2.png");
