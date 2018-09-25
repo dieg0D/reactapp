@@ -38,6 +38,31 @@ class UsersController < ApplicationController
     @user.destroy
   end
 
+  def login
+    @email = params[:email]
+    @password = params[:password]
+    
+    if User.exists?(email: @email)
+      @user = User.find_by(email: @email)
+      if @password === @user.password
+        render json: {
+          status: 200,
+          message: "Login feito com sucesso"
+        }.to_json
+      else
+        render json: {
+          status: 404,
+          message: "Senha incorreta"
+        }.to_json
+      end
+    else 
+      render json: {
+        status: 403,
+        message: "Usuário não registrado!"
+      }.to_json
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
